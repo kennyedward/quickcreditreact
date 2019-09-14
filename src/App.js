@@ -1,11 +1,16 @@
 import React from 'react';
-import './App.css';
+import { Link, Switch, Route } from 'react-router-dom';
+import Home from './components/home/index';
+import { Signin } from './components/auth/Signin/index'
+import { Signup } from './components/auth/Signup/index'
 
-const App = () => {
+export const App = () => {
     return (
-      <div className="App">
-        <h1>Quick Credit React</h1>
-      </div>
+      <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/signin" component={Signin} />
+          <Route path="/signup" component={Signup} />
+        </Switch>
     );
 }
 
