@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap');
+@import '../../assets/colors.scss';
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.mt-10 {
+    margin-top: 10rem;
+
+    &__logo {
+        width: 30%;
+    }
+}
+
+.primary-text-color {
+    color: $primaryColor;
+}
+
+.five-hours {
+    font-size: 4rem;
+    font-weight: bold;
+    color: $primaryColor;
+    margin-top: -2rem;
+}
+
+.get-started {
+    background: $primaryColor;
+    color: $whiteColor;
+    padding: 1rem 5rem;
+    text-transform: uppercase;
+    border-radius: 0.2rem;
+}
+
+.get-started:hover {
+    text-decoration: none;
+    color: $whiteColor;
+    background: $hoverColor;
+}
+
+.hero-background {
+    background: rgba(241, 241, 241, 0.822);
+    padding: 3rem;
+}
+
+.span-text {
+    color: $primaryColor;
+}
+
+.apply-link {
+    font-weight: bold;
+    color: $primaryColor;
+}
