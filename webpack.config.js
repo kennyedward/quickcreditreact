@@ -5,7 +5,8 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "build"),
-    filename: 'index.js'
+    filename: 'index.js',
+    publicPath: '/'
   },
     module: {
       rules: [
@@ -17,15 +18,22 @@ module.exports = {
           }
         },
         {
-          test: /\.css$/,
+          test: /\.s[ac]ss$/i,
           exclude: /node_modules/,
           use: [
-            "style-loader", "css-loader"
+            "style-loader", "css-loader", "sass-loader"
           ]
+        },
+        {
+          test: /\.svg$/,
+          loader: 'svg-inline-loader?classPrefix'
         }
       ]
     },
     mode: "development",
+    devServer: {
+      historyApiFallback: true,
+    },
     plugins: [
       new HtmlWebpackPlugin({
         template: "public/index.html"
