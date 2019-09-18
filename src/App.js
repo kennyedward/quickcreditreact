@@ -1,16 +1,17 @@
 import React from 'react';
-import { Link, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
+
 import Home from './components/home/index';
 import { Signin } from './components/auth/Signin/index'
-import { Signup } from './components/auth/Signup/index'
+import Signup from './components/auth/Signup/index';
 
-export const App = () => {
+const App = () => {
     return (
-      <Switch>
+      <BrowserRouter>
           <Route exact path="/" component={Home} />
           <Route path="/signin" component={Signin} />
           <Route path="/signup" component={Signup} />
-        </Switch>
+      </BrowserRouter>
     );
 }
 
